@@ -1,0 +1,10 @@
+# ECLIPSE
+bin/
+*.class
+target/
+.classpath
+.project
+.settings/
+
+# LOGS
+*.log
