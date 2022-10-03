@@ -5,11 +5,9 @@ import java.util.List;
 public interface Repository<K, T> {
     T findById(K id);
 
-    List<T> findAll(int limit, long offset);
+    List<T> findAll();
 
-    long count();
-
-    T save(T object);
+    T create(T object);
 
     T update(T object);
 
