@@ -21,10 +21,10 @@ public class Section {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
-    
+
     @Column(name = "name")
     private String name;
-    
+
     @ManyToMany(cascade = CascadeType.REFRESH)
     @JoinTable(name = "students_sections", joinColumns = @JoinColumn(name = "section_id"), inverseJoinColumns = @JoinColumn(name = "student_id"))
     private List<Student> students;
@@ -55,8 +55,7 @@ public class Section {
 
     @Override
     public String toString() {
-        return "Section [id=" + id + ", name=" + name + ", students=" + "]";
+        return "Section [id=" + id + ", name=" + name + ", section size=" + students.size() + "]";
     }
-    
-    
+
 }
