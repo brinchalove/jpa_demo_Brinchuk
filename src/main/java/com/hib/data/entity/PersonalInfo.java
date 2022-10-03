@@ -21,4 +21,25 @@ public class PersonalInfo {
     @OneToOne(mappedBy = "personalInfo", cascade = CascadeType.ALL)
     private User user;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    @Override
+    public String toString() {
+        return "PersonalInfo [id=" + id + ", userId=" + user.getId() + "]";
+    }
+    
 }
